@@ -1,0 +1,381 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/scopedcss/projectbundle/ABC Company.bundle.scp.css",
+      "PackagePath": "staticwebassets/ABC Company.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/0a8db3fb-abe2-4bfe-9a47-b8846d2afd05_54x86-Portrait-RoundCorner-My Dentist Clinique_Back.pdf",
+      "PackagePath": "staticwebassets/UsersCv/0a8db3fb-abe2-4bfe-9a47-b8846d2afd05_54x86-Portrait-RoundCorner-My Dentist Clinique_Back.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/0e5ff568-e8b8-4f7a-998e-84df86009342_54x86-Portrait-RoundCorner-My Dentist Clinique_Back.pdf",
+      "PackagePath": "staticwebassets/UsersCv/0e5ff568-e8b8-4f7a-998e-84df86009342_54x86-Portrait-RoundCorner-My Dentist Clinique_Back.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/2555fec2-1dea-419d-8853-c42cdc2fb9b9_Aether Paper Bag[1].pdf",
+      "PackagePath": "staticwebassets/UsersCv/2555fec2-1dea-419d-8853-c42cdc2fb9b9_Aether Paper Bag[1].pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/328c0058-f2db-4583-ab7c-05310b859f53_eye fix max.pdf",
+      "PackagePath": "staticwebassets/UsersCv/328c0058-f2db-4583-ab7c-05310b859f53_eye fix max.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/67da709d-4c10-473b-b6a7-3995cef7ece6_51x85-Landscape-(back)Pejandy-ALLNAMES-08.02.2023.pdf",
+      "PackagePath": "staticwebassets/UsersCv/67da709d-4c10-473b-b6a7-3995cef7ece6_51x85-Landscape-(back)Pejandy-ALLNAMES-08.02.2023.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/924cc101-4a8e-457d-b76a-04fab833d997_2020-06-03 Value Add Service Report.pdf",
+      "PackagePath": "staticwebassets/UsersCv/924cc101-4a8e-457d-b76a-04fab833d997_2020-06-03 Value Add Service Report.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/a83ddd1f-47dc-436e-b48a-f720953d24f6_145x210_portrait_B_left_front_Nailz Treat_Invoice Book-07.11.2022.pdf",
+      "PackagePath": "staticwebassets/UsersCv/a83ddd1f-47dc-436e-b48a-f720953d24f6_145x210_portrait_B_left_front_Nailz Treat_Invoice Book-07.11.2022.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/UsersCv/fc17d262-4c4c-44a4-b868-ae88eb881097_2020-06-03 Value Add Service Report.pdf",
+      "PackagePath": "staticwebassets/UsersCv/fc17d262-4c4c-44a4-b868-ae88eb881097_2020-06-03 Value Add Service Report.pdf"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/assets/.DS_Store",
+      "PackagePath": "staticwebassets/assets/.DS_Store"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/assets/CalenderIcon-02.svg",
+      "PackagePath": "staticwebassets/assets/CalenderIcon-02.svg"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/assets/MEMOJI.png",
+      "PackagePath": "staticwebassets/assets/MEMOJI.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/assets/VacancyIcon-04.svg",
+      "PackagePath": "staticwebassets/assets/VacancyIcon-04.svg"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/assets/logo-02.svg",
+      "PackagePath": "staticwebassets/assets/logo-02.svg"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/451c07af-3328-4833-a217-0768d59ec9c0_Screenshot 2024-10-21 095635.png",
+      "PackagePath": "staticwebassets/images/451c07af-3328-4833-a217-0768d59ec9c0_Screenshot 2024-10-21 095635.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/7128a25c-bfdc-4a74-95bc-c4c3464592fa_Screenshot 2024-11-21 233149.png",
+      "PackagePath": "staticwebassets/images/7128a25c-bfdc-4a74-95bc-c4c3464592fa_Screenshot 2024-11-21 233149.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/a78c0c10-b838-4399-a27c-0f710aca1442_Screenshot 2024-11-21 233149.png",
+      "PackagePath": "staticwebassets/images/a78c0c10-b838-4399-a27c-0f710aca1442_Screenshot 2024-11-21 233149.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/b3ef6c93-0d82-4a36-9808-1c55551d2cee_Screenshot 2024-11-12 214610.png",
+      "PackagePath": "staticwebassets/images/b3ef6c93-0d82-4a36-9808-1c55551d2cee_Screenshot 2024-11-12 214610.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/c3019fc2-1e9e-4c60-9801-dc24b75cabf6_Screenshot 2024-10-21 095635.png",
+      "PackagePath": "staticwebassets/images/c3019fc2-1e9e-4c60-9801-dc24b75cabf6_Screenshot 2024-10-21 095635.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/f532ece5-fa80-44eb-b09f-903b8bfd1ed5_Screenshot 2024-10-21 095635.png",
+      "PackagePath": "staticwebassets/images/f532ece5-fa80-44eb-b09f-903b8bfd1ed5_Screenshot 2024-10-21 095635.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/fe7b0dd5-1dcb-4325-905e-12325dd53512_Screenshot 2024-10-21 095635.png",
+      "PackagePath": "staticwebassets/images/fe7b0dd5-1dcb-4325-905e-12325dd53512_Screenshot 2024-10-21 095635.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/images/ff285e76-d13d-442e-8372-81b882a53d39_Screenshot 2024-11-12 214610.png",
+      "PackagePath": "staticwebassets/images/ff285e76-d13d-442e-8372-81b882a53d39_Screenshot 2024-11-12 214610.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/js/PreLoadScript.js",
+      "PackagePath": "staticwebassets/js/PreLoadScript.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/.DS_Store",
+      "PackagePath": "staticwebassets/usersProfileImages/.DS_Store"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/292ae34c-9a4c-4992-882d-67767924af19_sci1.png",
+      "PackagePath": "staticwebassets/usersProfileImages/292ae34c-9a4c-4992-882d-67767924af19_sci1.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/9f8bf7d2-1fb8-43bb-b78e-4916777d3010_110mm x 60mm_(Sticker)-Grace Fire-05.12.2024 .jpg",
+      "PackagePath": "staticwebassets/usersProfileImages/9f8bf7d2-1fb8-43bb-b78e-4916777d3010_110mm x 60mm_(Sticker)-Grace Fire-05.12.2024 .jpg"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/DefaultProfileImage.svg",
+      "PackagePath": "staticwebassets/usersProfileImages/DefaultProfileImage.svg"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/e32d4369-c564-4979-858d-864e2d6c447f_maths.png",
+      "PackagePath": "staticwebassets/usersProfileImages/e32d4369-c564-4979-858d-864e2d6c447f_maths.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/fca66a44-8f71-453d-b3fb-6f0228e258ac_sci1.png",
+      "PackagePath": "staticwebassets/usersProfileImages/fca66a44-8f71-453d-b3fb-6f0228e258ac_sci1.png"
+    },
+    {
+      "Id": "/Users/ahmedhasnain/Projects/ABC Company/ABC Company/wwwroot/usersProfileImages/ffb3a95e-58d1-4f1c-92be-e32be9d9db17_Attachment_1631008068-2.jpeg",
+      "PackagePath": "staticwebassets/usersProfileImages/ffb3a95e-58d1-4f1c-92be-e32be9d9db17_Attachment_1631008068-2.jpeg"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.ABC Company.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.ABC Company.props",
+      "PackagePath": "build\\ABC Company.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.ABC Company.props",
+      "PackagePath": "buildMultiTargeting\\ABC Company.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.ABC Company.props",
+      "PackagePath": "buildTransitive\\ABC Company.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

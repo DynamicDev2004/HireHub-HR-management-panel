@@ -1,0 +1,75 @@
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/appsettings.Development.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/appsettings.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/ABC Company.staticwebassets.runtime.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/ABC Company
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/ABC Company.deps.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/ABC Company.runtimeconfig.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/ABC Company.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/ABC Company.pdb
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Azure.Core.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Azure.Identity.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Humanizer.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.CodeDom.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Drawing.Common.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Memory.Data.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Runtime.Caching.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Security.Permissions.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/System.Windows.Extensions.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.csproj.AssemblyReference.cache
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.AssemblyInfoInputs.cache
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.AssemblyInfo.cs
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.csproj.CoreCompileInputs.cache
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.MvcApplicationPartsAssemblyInfo.cache
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.RazorAssemblyInfo.cache
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.RazorAssemblyInfo.cs
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets/msbuild.ABC Company.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets/msbuild.build.ABC Company.props
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.ABC Company.props
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.ABC Company.props
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets.build.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/staticwebassets.development.json
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/scopedcss/bundle/ABC Company.styles.css
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/scopedcss/projectbundle/ABC Company.bundle.scp.css
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.csproj.CopyComplete
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/refint/ABC Company.dll
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.pdb
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ABC Company.genruntimeconfig.cache
+/Users/ahmedhasnain/Projects/ABC Company/ABC Company/obj/Debug/net7.0/ref/ABC Company.dll
