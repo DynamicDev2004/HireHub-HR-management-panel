@@ -1,0 +1,170 @@
+﻿@model UserHomeParentModel
+
+<title>@ViewData["Title"] HOME</title>
+
+<div class="bg-gradient-to-r from-[#0f0f0f] to-black from-10% to-60% w-screen min-h-screen items-center flex justify-between px-5 md:px-28 gap-9 flex-wrap pt-[80px]">
+
+
+    <!-- Left SIDE -->
+    <div class="flex-1_2_100% flex flex-col">
+        <img src="~/assets/MEMOJI.png" class="mb-7" width="80px" alt="">
+        <h4 class="text-white font-light text-[18pt] m-0">Hello</h4>
+        <h4 class="bg-gradient-to-r from-[#00bfff]  to-[#003989] text-transparent max-w-[10.2ch] bg-clip-text font-semibold text-[40pt] m-[-3px]  md:text-[50pt]">
+            @Context.Session.GetString("UserName")
+
+        </h4>
+        <p class=" text-[#7d7d7d]">
+            Wishing you a wonderful and highly productive day <br>filled with success and
+            accomplishment!
+        </p>
+    </div>
+    <!-- right Side -->
+
+    <div class="flex gap-4 mt-12 flex-wrap">
+
+        <div class=" flex flex-col gap-4 justify-between flex-[100%] md:flex-[0%]">
+
+            <!-- Review CARD -->
+            <div class="w-full md:w-80 h-60 rounded-3xl bg-gradient-to-r from-[#0083de] to-[#0044a1] from-0% to-60% p-3">
+
+                <h2 class="text-[8pt] font-light text-white">Last Applied Job Status</h2>
+
+                @{
+                    if (Model.applicant != null && Model.applicant.Any())
+                    {
+                        var firstApplicant = Model.applicant.FirstOrDefault();
+
+                        if (firstApplicant?.ApplicantInterview1DateTime != null &&
+                            firstApplicant?.ApplicantIsSelected == null &&
+                            firstApplicant?.ApplicantIsHired == null)
+                        {
+                            <h1 class="text-[29pt] font-regular text-white">InProgress</h1>
+                        }
+                        else if (firstApplicant?.ApplicantInterview1DateTime == null)
+                        {
+                            <h1 class="text-[29pt] font-regular text-white">InReview</h1>
+                        }
+                        else if (firstApplicant?.ApplicantIsSelected != null &&
+                                 firstApplicant?.ApplicantIsHired == null)
+                        {
+                            <h1 class="text-[29pt] font-regular text-white">Selected</h1>
+                        }
+                        else if (firstApplicant?.ApplicantIsHired != null)
+                        {
+                            <h1 class="text-[29pt] font-regular text-white">Hired</h1>
+                        }
+                        else
+                        {
+                            <h1 class="text-[29pt] font-regular text-white">Not Applied</h1>
+                        }
+                    }
+                    else
+                    {
+                        <h1 class="text-[29pt] font-regular text-white">Not Applied</h1>
+                    }
+                }
+
+
+
+
+
+                <!-- Progress Container -->
+
+                <div class="w-full mt-14 relative h-14">
+                    <h2 class="text-[9pt] font-light text-white mb-2">Interview Stage</h2>
+
+                    <div class="h-1 w-full bg-[#ffffff66] rounded-full relative">
+
+                        <!-- Line Circles -->
+                        <div class="bg-white w-2 h-2 rounded-full absolute top-[-2px] left-0 after:content-['1'] after:absolute after:top-3 after:left-0 after:text-white text-xs">
+                        </div>
+                        <div class="bg-white w-2 h-2 rounded-full absolute top-[-2px] left-[50%] after:content-['2'] after:absolute after:top-3 after:left-0 after:text-white text-xs">
+                        </div>
+                        <div class="bg-white w-2 h-2 rounded-full absolute top-[-2px] left-[99%] after:content-['3'] after:absolute after:top-3 after:left-0 after:text-white text-xs">
+                        </div>
+
+                        @{
+                            if (Model.applicant != null && Model.applicant.Any())
+                            {
+                                if (Model.applicant.FirstOrDefault()?.ApplicantInterview1DateTime != null)
+                                {
+                                    <div class="h-1 w-[2%] bg-[#ffffff] rounded-full absolute left-0 top-0"></div>
+                                }
+                                else if (Model.applicant.FirstOrDefault()?.ApplicantInterview2DateTime != null)
+                                {
+                                    <div class="h-1 w-[50%] bg-[#ffffff] rounded-full absolute left-0 top-0"></div>
+                                }
+                                else if (Model.applicant.FirstOrDefault()?.ApplicantInterview3DateTime != null)
+                                {
+                                    <div class="h-1 w-[99%] bg-[#ffffff] rounded-full absolute left-0 top-0"></div>
+                                }
+                                else
+                                {
+                                    <div class="h-1 w-[2%] bg-[#ffffff] rounded-full absolute left-0 top-0"></div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="h-1 w-[2%] bg-[#ffffff] rounded-full absolute left-0 top-0"></div>
+                            }
+                        }
+
+                    </div>
+                </div>
+                <a asp-action="UserAppliedJobList" asp-controller="Applicant" class=" border w-max  p-1 text-xs px-3 text-white rounded-full text-[10pt] flex hover:text-[#008ded] cursor-pointer">
+                    View
+                    All
+                </a>
+
+            </div>
+
+            <!-- Date Card -->
+            <div class="w-full flex items-center justify-between p-3 h-20 rounded-3xl bg-[#161616] ">
+
+                <h1 class="bg-gradient-to-r from-[#00bfff] px-2 to-[#003989] text-transparent  bg-clip-text font-regular text-[24pt] m-[-3px]">
+                    @DateOnly.FromDateTime(DateTime.Now)
+                </h1>
+                <img src="~/assets/CalenderIcon-02.svg" alt="" width="55px">
+            </div>
+
+            <!-- Latest Job Post card -->
+            <div class="w-full md:w-80  h-48 p-3 rounded-3xl bg-[#161616] relative">
+
+                <h2 class="text-[8pt] font-light text-white">Latest Vacancy</h2>
+
+                <h1 class="text-[20pt] font-regular text-white">@Model.jobsdata.FirstOrDefault()?.JobTitle</h1>
+                <p class="w-full text-[8pt] max-h-[9ch]  text-[#939393]  overflow-hidden">
+                    @Model.jobsdata.FirstOrDefault()?.JobDescription
+                </p>
+                <a asp-action="Index" asp-controller="Job" class=" absolute left-3 bottom-3 b border w-max p-1 text-xs px-3 text-white rounded-full text-[10pt] flex hover:text-[#008ded] cursor-pointer">
+                    View
+                    All
+                </a>
+            </div>
+        </div>
+
+        <div class=" flex flex-col gap-4 flex-[100%] sm:flex-[0%]">
+            <!-- Active Vacancies card -->
+            <div class="w-full md:w-52 h-80 rounded-3xl bg-[#161616] p-3 relative">
+
+                <h2 class="text-[8pt] font-light text-white">Active Vacancies</h2>
+                <h1 class="bg-gradient-to-r from-[#00bfff] px-2 to-[#003989] text-transparent  bg-clip-text font-regular text-[57pt] m-[-3px]">
+                    @Model.activeVacancies
+                </h1>
+                <img src="~/assets/VacancyIcon-04.svg" alt="" width="120px">
+                <a asp-action="Index" asp-controller="Job" class=" absolute left-3 bottom-3 b border w-max p-1 text-xs px-3 text-white rounded-full text-[10pt] flex hover:text-[#008ded] cursor-pointer">
+                    View
+                    Details
+                </a>
+            </div>
+            <div class=" w-full md:w-52  h-52 rounded-3xl bg-[#161616] p-3 ">
+                <h2 class="text-[8pt] font-light text-white">Jobs Applied</h2>
+                <h1 class="text-white font-regular text-[48pt] m-[-3px]">@Model.jobApplied</h1>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

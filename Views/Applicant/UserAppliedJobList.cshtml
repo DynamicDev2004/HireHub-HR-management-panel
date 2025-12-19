@@ -1,0 +1,79 @@
+﻿@model CombinedAppliedJobsData
+
+<title>@ViewData["Title"] JOBS</title>
+<div class="container mx-auto pt-[100px] px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach (var applicant in Model.applicant)
+        {
+            <div class="bg-[#161616] shadow-md rounded-lg p-4 relative">
+
+
+                <h2 class="text-xl font-bold text-white mb-4">@applicant.Job.JobTitle</h2>
+
+                <p class="text-gray-400 mb-2">
+
+
+                    <strong>CV:</strong>
+
+
+                    <span class="text-gray-200">
+
+
+                        <iframe src=" @applicant.ApplicantCv"
+                                type="application/pdf"
+                                frameBorder="0"
+                                scrolling="auto"
+                                height="100%"
+                                width="100%"></iframe>
+
+
+
+
+                    </span>
+                </p>
+
+                <div class="my-4">
+                    <strong class="text-gray-400">Proposal:</strong>
+                    <textarea disabled class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" readonly>@applicant.ApplicantProposal</textarea>
+                </div>
+
+                <!-- Interview Dates as Button-like Labels -->
+                <div class="mb-4">
+                    <strong class="text-gray-400">Interviews:</strong>
+                    <div class="flex space-x-2 mt-2">
+                        <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">@applicant.ApplicantInterview1DateTime</span>
+                        <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">@applicant.ApplicantInterview2DateTime</span>
+                        <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">@applicant.ApplicantInterview3DateTime</span>
+                    </div>
+                </div>
+
+                <!-- Status as Button-like Labels -->
+                <div class="mb-4">
+                    <strong class="text-gray-400">Status:</strong>
+                    <div class="flex space-x-2 mt-2">
+                        <span class="px-3 py-1 bg-gray-700 text-green-400 rounded-full text-sm">@applicant.Applicant1Status</span>
+                        <span class="px-3 py-1 bg-gray-700 text-yellow-400 rounded-full text-sm">@applicant.Applicant2Status</span>
+                        <span class="px-3 py-1 bg-gray-700 text-red-400 rounded-full text-sm">@applicant.Applicant3Status</span>
+                    </div>
+                </div>
+
+                <!-- Selection and Hiring as Button-like Labels -->
+                <div class="mb-4">
+                    <strong class="text-gray-400">Selection:</strong>
+                    <div class="flex space-x-2 mt-2">
+                        <span class="px-3 py-1 bg-gray-700 text-blue-400 rounded-full text-sm">
+                            @(applicant.ApplicantIsSelected)
+                        </span>
+                        <span class="px-3 py-1 bg-gray-700 text-purple-400 rounded-full text-sm">
+                            @(applicant.ApplicantIsHired)
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hidden Fields -->
+                <input type="hidden" value="@applicant.JobId" />
+                <input type="hidden" value="@applicant.user_id" />
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,99 @@
+﻿@model TblApplicant
+
+
+<div class="w-screen flex items-center justify-center">
+
+    <div class="container mx-auto pt-[100px] px-6">
+        <form asp-action="EditApplication" asp-controller="Applicant" method="post" enctype="multipart/form-data" class="bg-[#161616] shadow-md rounded-lg p-4">
+            <h1 class="text-2xl font-bold text-white mb-6">Edit Applicant Details</h1>
+
+            <!-- Hidden fields for ApplicantId and JobId -->
+            <input type="hidden" asp-for="ApplicantId" />
+            <input type="hidden" asp-for="JobId" />
+
+
+
+            <div class="flex gap-7 w-full flex-wrap">
+                <!-- Interview Dates -->
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Interview 1 Date & Time:</label>
+                    <input type="datetime-local" asp-for="ApplicantInterview1DateTime"
+                           class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+                </div>
+
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Interview 2 Date & Time:</label>
+                    <input type="datetime-local" asp-for="ApplicantInterview2DateTime"
+                           class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+                </div>
+
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Interview 3 Date & Time:</label>
+                    <input type="datetime-local" asp-for="ApplicantInterview3DateTime"
+                           class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+                </div>
+            </div>
+
+            <div class="flex gap-7 w-full flex-wrap">
+                <!-- Status Dropdowns -->
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Applicant 1 Status:</label>
+                    <select asp-for="Applicant1Status" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="">-- Update Status --</option>
+                        <option value="passed">Passed</option>
+                        <option value="review">Review</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Applicant 2 Status:</label>
+                    <select asp-for="Applicant2Status" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="">-- Update Status --</option>
+                        <option value="passed">Passed</option>
+                        <option value="review">Review</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Applicant 3 Status:</label>
+                    <select asp-for="Applicant3Status" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="">-- Update Status --</option>
+                        <option value="passed">Passed</option>
+                        <option value="review">Review</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex gap-7 w-full flex-wrap">
+                <!-- Selection Dropdowns -->
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Is Applicant Selected?</label>
+                    <select asp-for="ApplicantIsSelected" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="">-- Update Status --</option>
+                        <option value="selected">Selected</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="mb-4 flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Is Applicant Hired?</label>
+                    <select asp-for="ApplicantIsHired" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="">-- Update Status --</option>
+                        <option value="hired">Hired</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+            </div>
+
+                <!-- Submit Button -->
+            <div class="flex justify-end">
+                <a asp-action="AdminIndex" asp-controller="AdminHome" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg transition duration-300 flex items-center justify-center">Cancel</a>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>

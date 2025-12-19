@@ -1,0 +1,52 @@
+﻿@model TblRole
+
+
+
+
+<div class="bg-gradient-to-r from-[#0f0f0f] to-black from-10% to-60% w-screen min-h-screen flex justify-center  px-10 flex-wrap pt-20">
+
+
+
+    <div class="bg-[#1a1a1a] p-8 rounded-3xl shadow-xl w-3/4 max-w-md m-8">
+        <h1 class="text-2xl font-bold mb-6 text-center text-white">Create a New Role</h1>
+        <form asp-controller="Roles" asp-action="Edit" method="post" class="space-y-6">
+
+            <input asp-for="RoleId"
+                   class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500 hidden">
+
+            <!-- Role Name -->
+            <div>
+                <label asp-for="RoleName" class="block text-sm font-medium mb-2 text-white">Role Name</label>
+                <input asp-for="RoleName" placeholder="Enter role name"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Role Description -->
+            <div>
+                <label asp-for="RoleDescription" class="block text-sm font-medium mb-2 text-white">Role Description</label>
+                <textarea asp-for="RoleDescription" rows="4" placeholder="Enter role description"
+                          class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center flex gap-5 w-full justify-center">
+
+                <a asp-action="AdminIndex" asp-controller="AdminHome" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Back</a>
+
+
+                <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Update
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+</div>

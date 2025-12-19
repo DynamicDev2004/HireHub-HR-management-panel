@@ -1,0 +1,81 @@
+﻿@model StaffModel
+
+<div class="w-screen flex justify-center pt-[90px]">
+    <a asp-action="AllStaffData" asp-controller="Staff" class="mx-2 border h-max w-max p-1 text-xs px-3 text-white rounded-full hover:text-[#008ded] cursor-pointer">Back</a>
+    <div class="container mt-4">
+        <div class="row flex flex-wrap gap-4 justify-center">
+
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm flex gap-4 relative">
+                    <div class="absolute right-3 top-3 flex gap-5">
+                        <a class="cursor-pointer" asp-action="DeleteStaff" asp-controller="Staff" asp-route-id="@Model.Staff_Id">
+                            <svg width="13px" id="b05fc9f1-0143-41df-b46a-24b80620e30f" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.72 155.69">
+                                <defs>
+                                    <style>
+                                        .f1b4e84c-14d3-4da2-afb8-ea41b2aaa7cc {
+                                            fill: #ed1c24;
+                                        }
+                                    </style>
+                                </defs>
+                                <path class="f1b4e84c-14d3-4da2-afb8-ea41b2aaa7cc" d="M91.74,7c2.61,1.06,3.52,3,3.37,5.78-.16,3,0,6,0,9H43.38v-4c0-1.67.11-3.36,0-5C43.14,10,44.1,8.08,46.72,7Z" transform="translate(-6.81 -7.02)" />
+                                <path class="f1b4e84c-14d3-4da2-afb8-ea41b2aaa7cc" d="M121.31,59.79c-.27,4-.53,7.8-.81,11.64q-.84,11.67-1.71,23.34-1.17,15.75-2.32,31.52-1,13.41-1.94,26.82c-.1,1.32-.17,2.63-.32,3.94a6.55,6.55,0,0,1-6.07,5.63c-.56,0-1.12,0-1.68,0h-75c-5.17,0-7.58-2.38-7.91-7.5-.71-11.12-1.53-22.23-2.29-33.35q-1-14.4-1.94-28.81-1.08-15.84-2.15-31.68c0-.5,0-1,0-1.58ZM49.12,108.93q0,15.12,0,30.24c0,2.91,1.85,4.92,4.45,4.9S58,142,58,139V78.8a9.38,9.38,0,0,0,0-1.06,4.44,4.44,0,0,0-6.48-3.47,4.59,4.59,0,0,0-2.38,4.42Q49.14,93.81,49.12,108.93Zm31.31,0v24.31c0,2.13,0,4.26,0,6.38a4.37,4.37,0,0,0,4.28,4.44,4.46,4.46,0,0,0,4.56-4.17c0-.51,0-1,0-1.52v-59c0-.51,0-1,0-1.52A4.47,4.47,0,0,0,83.49,74c-1.93.6-3,2.3-3,4.73Q80.43,93.81,80.43,108.93Z" transform="translate(-6.81 -7.02)" />
+                                <path class="f1b4e84c-14d3-4da2-afb8-ea41b2aaa7cc" d="M131.51,50.73H6.81c.15-4.15,0-8.28.55-12.29.62-4.31,4.69-7.3,9.28-7.59.36,0,.71,0,1.07,0H120.79c5.19,0,9.26,2.87,10.32,7.49a27.21,27.21,0,0,1,.39,5.28C131.56,45.93,131.51,48.25,131.51,50.73Z" transform="translate(-6.81 -7.02)" />
+                            </svg>
+                        </a>
+                        <a class="cursor-pointer" asp-action="EditStaff" asp-controller="Staff" asp-route-id="@Model.Staff_Id">
+                            <svg width="15px" id="fc531f65-72f6-46ab-9934-cd28d096c6d0" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.48 120.34">
+                                <defs>
+                                    <style>
+                                        .f7c5bfbc-9afb-4fc9-b835-edd115512396 {
+                                            fill: #fff;
+                                        }
+                                    </style>
+                                </defs>
+                                <path class="f7c5bfbc-9afb-4fc9-b835-edd115512396" d="M131.81,39.71a14.83,14.83,0,0,1-.89,2.76,18.91,18.91,0,0,1-2.57,4c-2.27,2.47-4.74,4.77-7,7.07L103.48,35.75c2.92-2.74,5.64-5.91,9-8.28,7.12-5.09,17.13-.89,19.12,7.74a7.25,7.25,0,0,0,.26.74Z" transform="translate(-11.33 -25.27)" />
+                                <path class="f7c5bfbc-9afb-4fc9-b835-edd115512396" d="M61.48,145.59c-11.88,0-23.76,0-35.64,0-5.34,0-9.18-2.48-12.08-6.68a14.11,14.11,0,0,1-2.43-8.21q0-35.11,0-70.23a15.07,15.07,0,0,1,15-15.09c13.33,0,26.66,0,40,0a5.07,5.07,0,0,1,5.22,4.31,5,5,0,0,1-3.76,5.6,8.2,8.2,0,0,1-1.86.16c-12.9,0-25.8.06-38.7,0a5.48,5.48,0,0,0-5.84,5.8q.14,34.41,0,68.82a5.46,5.46,0,0,0,5.74,5.74q34.41-.12,68.82,0a5.47,5.47,0,0,0,5.79-5.84c-.08-13.1,0-26.2,0-39.29a5,5,0,0,1,9.48-2.31,6.16,6.16,0,0,1,.57,2.49c0,13.37.07,26.74,0,40.11a15.09,15.09,0,0,1-11.82,14.54,7.67,7.67,0,0,1-1.52.1Z" transform="translate(-11.33 -25.27)" />
+                                <path class="f7c5bfbc-9afb-4fc9-b835-edd115512396" d="M97.93,41.22,115.8,59.09c-.26.27-.56.61-.88.93q-18.7,18.7-37.39,37.44a8.34,8.34,0,0,1-4.63,2.46c-5,.93-10.05,2-15.07,3-2.69.54-4.1-.85-3.56-3.52,1.08-5.37,2.16-10.73,3.2-16.11A5.38,5.38,0,0,1,59,80.34Q78.15,61.27,97.21,42.18A7.75,7.75,0,0,0,97.93,41.22Z" transform="translate(-11.33 -25.27)" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="card-body bg-[#161616] rounded-xl p-5">
+                        <h5 class="card-title text-white mb-3">Staff ID: @Model.Staff_Id</h5>
+                        <ul class="list-unstyled mb-0 text-white ">
+                            <li><strong class="text-[#878787]">User ID:</strong> @Model.Staff_UserId</li>
+                            <li><strong class="text-[#878787]">Name:</strong> @Model.Staff_Name</li>
+                            <li><strong class="text-[#878787]">Salary:</strong> @Model.Staff_Salary</li>
+
+                            <li>
+                                <strong class="text-[#878787]">Role:</strong>
+                                @{
+                                    var rolesList = (List<TblRole>)ViewBag.roles; // Explicit cast
+                                }
+                                @(rolesList.FirstOrDefault(x => x.RoleId == Model.Staff_Role)?.RoleName ?? "Unknown Role")
+                            </li>
+
+                            <li><strong class="text-[#878787]">Joining Date:</strong> @Model.Staff_JoiningDate.ToString("dd-MM-yyyy HH:mm:tt")</li>
+                            <li><strong class="text-[#878787]">Status:</strong> @Model.Staff_Status</li>
+                            <li><strong class="text-[#878787]">Timing From:</strong> @Model.Staff_TimingFrom.ToString("hh:mm tt")</li>
+                            <li><strong class="text-[#878787]">Timing To:</strong> @Model.Staff_TimingTo.ToString("hh:mm tt")</li>
+                            <li><strong class="text-[#878787]">Duration Type:</strong> @Model.Staff_DurationType</li>
+                            <li><strong class="text-[#878787]">Access Type:</strong> @Model.Staff_AccessType</li>
+                            @if (Model.Staff_LeftDateTime.HasValue)
+                            {
+                                <li><strong class="text-[#878787]">Left Date:</strong> @Model.Staff_LeftDateTime.Value.ToString("dd-MM-yyyy HH:mm:tt")</li>
+                            }
+                            else
+                            {
+                                <li><strong class="text-[#878787]">Left Date:</strong> Currently Active</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

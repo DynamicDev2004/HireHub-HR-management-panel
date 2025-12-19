@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TblUser>
+
+
+
+
+<h1 class="text-center text-4xl font-bold">All Users</h1>
+
+
+
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    User Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    User Email
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    User Password
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    User ProfilePicture
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    User ContactNo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    User CreatedAt
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (TblUser user in Model)
+                {
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            @user.UserName
+                        </th>
+                        <td class="px-user6 py-4">
+                            @user.UserEmail
+                        </td>
+                        <td class="px-6 py-4">
+                            @user.UserPassword
+                        </td>
+                        <td class="px-6 py-4">
+                            <img height="100px" width="100px" src="~/images/@user.UserProfilePicture" alt="@user.UserName" />
+                        </td>
+                        <td class="px-6 py-4">
+                            @user.UserContactNo
+                        </td>
+                        <td class="px-6 py-4">
+                            @user.UserCreatedAt
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex gap-3">
+                                <a asp-controller="Users" asp-action="Edit" asp-route-UserId="@user.UserId" class="bg-blue-500 py-2 px-4 rounded-md text-white">Edit</a>
+                                <a asp-controller="Users" asp-action="Delete" asp-route-UserId="@user.UserId" class="bg-red-500 py-2 px-4 rounded-md text-white">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>

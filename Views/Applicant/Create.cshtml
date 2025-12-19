@@ -1,0 +1,43 @@
+﻿@model TblApplicant
+
+    <div class="bg-gradient-to-r from-[#0f0f0f] to-black min-h-screen flex items-center justify-center min-w-screen w-screen">
+        <div class="w-2/3 max-w-[600px] min-w-[350px] rounded-2xl bg-[#161616] flex flex-col items-center p-6 py-8">
+            <h1 class="font-bold text-white text-2xl mb-6">Submit Your Proposal</h1>
+
+            <form asp-controller="Applicant" asp-action="Create" method="POST" enctype="multipart/form-data" class="flex flex-col w-full px-2">
+
+                <input readonly asp-for="user_id" class="hidden" />
+                <input readonly asp-for="JobId" class="hidden" />
+                <div class="flex flex-col mb-5">
+                    <label for="proposal" class="text-white text-xs">Proposal</label>
+                    <textarea id="proposal"
+                              name="ApplicantProposal"
+                              rows="4"
+                              class="bg-[#ffffff13] text-white outline-none rounded-xl text-xs p-3 mt-1 max-h-[50%]"
+                              placeholder="Write your proposal here..."
+                              required
+                              asp-for="ApplicantProposal"></textarea>
+                </div>
+
+
+                <div class="flex flex-col mb-5">
+                    <label for="cv" class="text-white text-xs">Upload CV (PDF)</label>
+                    <input id="cv"
+                           accept=".pdf"
+                           class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1 file:bg-transparent file:text-white file:rounded-full file:border file:border-[#ffffff4d] file:px-2 file:py-1 hover:file:bg-[#ffffff4d] cursor-pointer"
+                           required
+                           asp-for="CVFile">
+
+                </div>
+
+
+                <div class="flex justify-center mt-6">
+                    <a asp-action="Index" asp-controller="Job" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg transition duration-300 flex items-center justify-center">Cancel</a>
+                    <button type="submit"
+                            class="border border-[#0083de] w-max p-1 text-xs px-4 text-white bg-[#0083de] rounded-full text-[10pt] hover:bg-transparent hover:text-[#0083de] cursor-pointer transition">
+                        Submit Proposal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>

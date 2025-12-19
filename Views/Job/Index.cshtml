@@ -1,0 +1,118 @@
+﻿@model List<TblJob>
+
+
+
+
+  <!-- MAIN HERO SECTION -->
+  <div
+    class="bg-gradient-to-r from-[#0f0f0f] to-black from-10% to-60% w-screen min-h-screen flex  px-10 flex-wrap pt-20 content-start">
+
+<!-- Search Box Container -->
+      <div class="mx-auto w-screen py-6 h-max">
+          <div class="flex">
+              <div class="relative w-full">
+                  <input type="search"
+                         id="search-dropdown"
+                         class="block p-2.5 w-full z-20 text-sm text-gray-900 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-[#161616] dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                         placeholder="Search a Job"
+                         required
+                         oninput="filterCards()" />
+                  <button type="submit"
+                          class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-[#008ded] rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                      <svg class="w-4 h-4"
+                           aria-hidden="true"
+                           xmlns="http://www.w3.org/2000/svg"
+                           fill="none"
+                           viewBox="0 0 20 20">
+                          <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                      </svg>
+                      <span class="sr-only">Search</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  
+  
+<!-- Jobs List -->
+      <div class="w-screen overflow-scroll flex flex-wrap flex-col gap-3">
+
+
+          <!-- JOB LIST MODAL -->
+          @foreach (TblJob job in Model)
+          {
+              <div class="job-card bg-[#161616] w-full max-w-full flex flex-col sm:flex-row gap-3 sm:items-center justify-between px-5 py-4 rounded-md relative">
+                  <div class="flex flex-col w-9/12">
+                      <span class="text-[8pt] mb-5 text-[#686868]">
+                          Posted on @job.JobCreatedAt
+                      </span>
+                      <h3 class="job-title font-bold mt-px text-[#ffffff]">@job.JobTitle</h3>
+                      <p class="text-[#bbbbbb] text-[10pt]">@job.JobDescription</p>
+                      <span class="text-[#ffffff] text-[11pt] font-bold mt-7">
+                          Duration: @job.JobTimingFrom to @job.JobTimingTo
+                      </span>
+                      <span class="text-[#008ded] text-[14pt] font-bold mt-2 mb-5">
+                          Salary: @job.JobSalary
+                      </span>
+                      <div class="flex items-center gap-3 mt-2">
+                          <span class="bg-[#008eed34] text-[#008ded] rounded-full px-3 py-1 text-sm">
+                              @job.JobDurationType
+                          </span>
+                          <span class="text-[#008ded] text-sm flex gap-1 items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg"
+                                   class="h-4 w-4"
+                                   fill="none"
+                                   viewBox="0 0 24 24"
+                                   stroke="currentColor"
+                                   stroke-width="2">
+                                  <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                  <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                              @job.JobLocation
+                          </span>
+                      </div>
+                  </div>
+                  <div class="flex flex-col items-start">
+                      <span class="text-[#008ded] font-bold mb-9 text-left md:text-center">@job.JobOpenStatus</span>
+                      <a asp-action="Create" asp-controller="Applicant" asp-route-jobId="@job.JobId"  class="px-3 p-1 hidden md:flex  bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center  hover:bg-blue-900 cursor-pointer">
+                          Apply Now
+                      </a>
+                  </div>
+              </div>
+          }
+
+
+
+
+      </div>
+
+
+  
+
+
+  
+
+
+
+
+  </div>
+  <script>function filterCards() {
+          const searchInput = document.getElementById("search-dropdown").value.toLowerCase();
+          const cards = document.querySelectorAll(".job-card");
+
+          cards.forEach(card => {
+              const title = card.querySelector(".job-title").innerText.toLowerCase();
+              if (title.includes(searchInput)) {
+                  card.classList.remove("hidden");
+              } else {
+                  card.classList.add("hidden");
+              }
+          });
+      }</script>

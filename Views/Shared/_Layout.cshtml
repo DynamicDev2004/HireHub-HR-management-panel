@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HIREHUB</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UserAuthentication.styles.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel='stylesheet'
+          href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <script src="~/js/PreLoadScript.js" asp-append-version="true"></script>
+</head>
+<body class="overflow-x-hidden bg-black">
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+            <script>
+                toastHandle("error", "@TempData["ErrorMessage"]");
+            </script>
+    }
+    @if (TempData["SuccessMessage"] != null)
+    {
+            <script>
+                toastHandle("success", "@TempData["SuccessMessage"]");
+            </script>
+    }
+
+    <div class="min-w-52 max-w-80 h-12 bg-[#161616] rounded-md hidden items-center p-2 shadow-md text-sm text-gray-700 absolute z-20 bottom-5"
+         style="right: -300px;" id="ToastSuccess"> <i class="fi fi-ss-badge-check mr-2 mt-1 text-base text-[#008ded] "></i><span id="ToastSuccessMessage" class="text-white"></span></div>
+    <div class="min-w-52 max-w-80 h-12 bg-[#161616] rounded-md hidden items-center p-2 shadow-md text-sm text-gray-700 absolute z-20 bottom-5"
+         style="right: -300px;" id="ToastError"> <i class="fi fi-ss-octagon-xmark mr-2 mt-1 text-base text-red-500 "></i><span id="ToastErrorMessage" class="text-white"></span></div>
+
+    @{
+        string userProfileImage = Context.Session.GetString("UserProfile");
+ 
+
+
+
+
+    <header class="w-full px-11 pt-6 pb-2 flex justify-between items-center fixed border-b-2 border-[#141414] backdrop-blur-xl z-50">
+        <img src="~/assets/logo-02.svg" alt="" width="130px">
+        <ul class="flex gap-6 items-center">
+            @if (Context.Session.GetString("ActiveSession") != null)
+            {
+
+
+                if (Context.Session.GetString("Admin") == null)
+                {
+                    <a asp-action="Index" asp-controller="UserHome" class="px-3 p-1 hidden md:flex  bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center  hover:bg-blue-900 cursor-pointer">
+                        Home
+                    </a>
+
+                    <a asp-action="Index" asp-controller="Job" class="px-3 p-1 hidden md:flex  bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center  hover:bg-blue-900 cursor-pointer">
+                        Explore Jobs
+                    </a>
+
+                    <a asp-action="UserAppliedJobList" asp-controller="Applicant" class="px-3 p-1 hidden md:flex  bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center  hover:bg-blue-900 cursor-pointer">
+                        Applied
+                    </a>
+
+                }
+                else
+                {
+                    <a asp-action="AdminIndex" asp-controller="AdminHome" class="px-3 p-1 hidden md:flex  bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center  hover:bg-blue-900 cursor-pointer">
+                        AdminHome
+                    </a>
+                }
+
+
+
+
+                <li>
+                    <div class="relative font-[sans-serif] w-max mx-auto">
+                        <button type="button" id="dropdownToggle"
+                                class=" flex items-center rounded-full text-[#333] text-sm w-max h-max">
+
+
+                            <img src='@userProfileImage' class="rounded-full shrink-0 block object-cover " width="30px" height="30px"></img>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 fill-gray-100 inline ml-3 block" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                      d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
+                                      clip-rule="evenodd" data-original="#000000" />
+                            </svg>
+
+
+
+
+                        </button>
+
+                        <ul id="dropdownMenu"
+                            class='absolute hidden shadow-lg bg-white py-2 z-[1000] right-0 mt-1 min-w-full w-max rounded-lg max-h-96 overflow-auto'>
+
+                            <a asp-action="Index" asp-controller="UserHome" class='py-2.5 px-5 items-center md:hidden flex hover:bg-gray-100 text-[#333] text-sm cursor-pointer'>
+                                <svg id="af09d244-63e8-4132-8e78-09879acefb2f" data-name="ad793dc9-c366-4547-a149-3192ce12be47" class="w-4 h-4 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.18 36.18"><g id="ef323976-aa8d-4105-8c0d-034aa56cd137" data-name="E3Lksg"><path d="M38.12,32c-.06.29-.12.59-.2.88a6.76,6.76,0,0,1-6.54,5.19c-1.45,0-2.9,0-4.35,0-.71,0-1-.26-1-1,0-4.39,0-8.78,0-13.17a2.24,2.24,0,0,0-1.52-2.3,3.06,3.06,0,0,0-.9-.13H16.42A2.25,2.25,0,0,0,14,23.87V37c0,.84-.23,1.07-1.06,1.07H8.81a6.78,6.78,0,0,1-6.87-6.88V16.41A6.7,6.7,0,0,1,5,10.59L16.13,3.11a6.79,6.79,0,0,1,3-1.17.76.76,0,0,0,.16-.06h1.42l.09.05A7.26,7.26,0,0,1,24.22,3.3C26.74,5,29.27,6.71,31.8,8.42l.3.16V8.15c0-1.31,0-2.62,0-3.92a.75.75,0,0,1,.68-.84.77.77,0,0,1,.82.85V9.32a.45.45,0,0,0,.22.47c.5.31,1,.64,1.46,1a6.58,6.58,0,0,1,2.57,3.65c.11.4.18.82.27,1.23ZM12.49,36.55V24a3.79,3.79,0,0,1,4-4.05h7.1a4.64,4.64,0,0,1,1.35.2,3.74,3.74,0,0,1,2.6,3.75c0,4,0,8.1,0,12.15v.46l.23,0c1.2,0,2.4,0,3.6,0a5.25,5.25,0,0,0,5.21-5.31q0-7.43,0-14.87a5.15,5.15,0,0,0-2.38-4.48Q28.65,8.1,23.05,4.34a5.18,5.18,0,0,0-6.05,0q-5.6,3.77-11.18,7.54a5.11,5.11,0,0,0-2.37,4.38c0,5,0,10,0,15.05A5.18,5.18,0,0,0,8.26,36.5c1.25.1,2.51,0,3.77,0Z" transform="translate(-1.94 -1.88)" /></g></svg>
+                                Home
+                            </a>
+
+
+
+
+                            <a asp-action="UserAppliedJobList" asp-controller="Applicant" class='py-2.5 px-5 items-center md:hidden flex hover:bg-gray-100 text-[#333] text-sm cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 mr-3" viewBox="0 0 512 512">
+                                    <path d="M197.332 170.668h-160C16.746 170.668 0 153.922 0 133.332v-96C0 16.746 16.746 0 37.332 0h160c20.59 0 37.336 16.746 37.336 37.332v96c0 20.59-16.746 37.336-37.336 37.336zM37.332 32A5.336 5.336 0 0 0 32 37.332v96a5.337 5.337 0 0 0 5.332 5.336h160a5.338 5.338 0 0 0 5.336-5.336v-96A5.337 5.337 0 0 0 197.332 32zm160 480h-160C16.746 512 0 495.254 0 474.668v-224c0-20.59 16.746-37.336 37.332-37.336h160c20.59 0 37.336 16.746 37.336 37.336v224c0 20.586-16.746 37.332-37.336 37.332zm-160-266.668A5.337 5.337 0 0 0 32 250.668v224A5.336 5.336 0 0 0 37.332 480h160a5.337 5.337 0 0 0 5.336-5.332v-224a5.338 5.338 0 0 0-5.336-5.336zM474.668 512h-160c-20.59 0-37.336-16.746-37.336-37.332v-96c0-20.59 16.746-37.336 37.336-37.336h160c20.586 0 37.332 16.746 37.332 37.336v96C512 495.254 495.254 512 474.668 512zm-160-138.668a5.338 5.338 0 0 0-5.336 5.336v96a5.337 5.337 0 0 0 5.336 5.332h160a5.336 5.336 0 0 0 5.332-5.332v-96a5.337 5.337 0 0 0-5.332-5.336zm160-74.664h-160c-20.59 0-37.336-16.746-37.336-37.336v-224C277.332 16.746 294.078 0 314.668 0h160C495.254 0 512 16.746 512 37.332v224c0 20.59-16.746 37.336-37.332 37.336zM314.668 32a5.337 5.337 0 0 0-5.336 5.332v224a5.338 5.338 0 0 0 5.336 5.336h160a5.337 5.337 0 0 0 5.332-5.336v-224A5.336 5.336 0 0 0 474.668 32zm0 0"
+                                          data-original="#000000"></path>
+                                </svg>
+                                Applied
+                            </a>
+
+
+                            <a asp-action="Index" asp-controller="Job" class='py-2.5 px-5 items-center md:hidden flex hover:bg-gray-100 text-[#333] text-sm cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 mr-3" viewBox="0 0 512 512">
+                                    <path d="M197.332 170.668h-160C16.746 170.668 0 153.922 0 133.332v-96C0 16.746 16.746 0 37.332 0h160c20.59 0 37.336 16.746 37.336 37.332v96c0 20.59-16.746 37.336-37.336 37.336zM37.332 32A5.336 5.336 0 0 0 32 37.332v96a5.337 5.337 0 0 0 5.332 5.336h160a5.338 5.338 0 0 0 5.336-5.336v-96A5.337 5.337 0 0 0 197.332 32zm160 480h-160C16.746 512 0 495.254 0 474.668v-224c0-20.59 16.746-37.336 37.332-37.336h160c20.59 0 37.336 16.746 37.336 37.336v224c0 20.586-16.746 37.332-37.336 37.332zm-160-266.668A5.337 5.337 0 0 0 32 250.668v224A5.336 5.336 0 0 0 37.332 480h160a5.337 5.337 0 0 0 5.336-5.332v-224a5.338 5.338 0 0 0-5.336-5.336zM474.668 512h-160c-20.59 0-37.336-16.746-37.336-37.332v-96c0-20.59 16.746-37.336 37.336-37.336h160c20.586 0 37.332 16.746 37.332 37.336v96C512 495.254 495.254 512 474.668 512zm-160-138.668a5.338 5.338 0 0 0-5.336 5.336v96a5.337 5.337 0 0 0 5.336 5.332h160a5.336 5.336 0 0 0 5.332-5.332v-96a5.337 5.337 0 0 0-5.332-5.336zm160-74.664h-160c-20.59 0-37.336-16.746-37.336-37.336v-224C277.332 16.746 294.078 0 314.668 0h160C495.254 0 512 16.746 512 37.332v224c0 20.59-16.746 37.336-37.332 37.336zM314.668 32a5.337 5.337 0 0 0-5.336 5.332v224a5.338 5.338 0 0 0 5.336 5.336h160a5.337 5.337 0 0 0 5.332-5.336v-224A5.336 5.336 0 0 0 474.668 32zm0 0"
+                                          data-original="#000000"></path>
+                                </svg>
+                                Explore Jobs
+                            </a>
+
+                            <a asp-action="logout" asp-controller="Authentication" class='py-2.5 px-5 flex items-center hover:bg-gray-100 text-[#333] text-sm cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 mr-3" viewBox="0 0 6.35 6.35">
+                                    <path d="M3.172.53a.265.266 0 0 0-.262.268v2.127a.265.266 0 0 0 .53 0V.798A.265.266 0 0 0 3.172.53zm1.544.532a.265.266 0 0 0-.026 0 .265.266 0 0 0-.147.47c.459.391.749.973.749 1.626 0 1.18-.944 2.131-2.116 2.131A2.12 2.12 0 0 1 1.06 3.16c0-.65.286-1.228.74-1.62a.265.266 0 1 0-.344-.404A2.667 2.667 0 0 0 .53 3.158a2.66 2.66 0 0 0 2.647 2.663 2.657 2.657 0 0 0 2.645-2.663c0-.812-.363-1.542-.936-2.03a.265.266 0 0 0-.17-.066z"
+                                          data-original="#000000"></path>
+                                </svg>
+                                Logout
+                            </a>
+
+
+                        </ul>
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </header>
+
+
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

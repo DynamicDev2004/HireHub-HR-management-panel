@@ -1,0 +1,59 @@
+﻿@model List<StaffModel>
+
+@{
+    var roles = (List<TblRole>)ViewBag.roles;
+
+    <div class="relative overflow-x-auto pt-[80px] w-screen flex justify-center">
+        <table class="w-full text-sm text-left rtl:text-right  ">
+            <thead class="text-xs text-gray-700 uppercase bg-[#202020] text-white  ">
+                <tr >
+                    <th scope="col" class="px-6 py-3">
+                        Name
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Salary
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Role
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <div>
+                    @{
+                        foreach (StaffModel staff in Model)
+                        {
+                        <tr class=" border-b bg-[#171717] text-white dark:border-gray-700">
+
+                            <td class="px-6 py-4">
+                                @staff.Staff_Name
+                            </td>
+                            <td class="px-6 py-4">
+                                @staff.Staff_Salary
+                            </td>
+                            <td class="px-6 py-4">
+
+
+                                @roles.FirstOrDefault(x => x.RoleId == staff.Staff_Role).RoleName
+                            </td>
+                            <td class="px-6 py-4">
+                                <a asp-action="EditStaff" asp-controller="Staff" asp-route-id="@staff.Staff_Id"  class="mx-2 border w-max p-1 text-xs px-3 text-white rounded-full hover:text-[#008ded] cursor-pointer">Edit</a>
+                                <a asp-action="DeleteStaff" asp-controller="Staff" asp-route-id="@staff.Staff_Id"  class="mx-2 border w-max p-1 text-xs px-3 text-white rounded-full hover:text-[#008ded] cursor-pointer">Delete</a>
+                                <a asp-action="DetailsStaff" asp-controller="Staff" asp-route-id="@staff.Staff_Id"  class="mx-2 border w-max p-1 text-xs px-3 text-white rounded-full hover:text-[#008ded] cursor-pointer">Details</a>
+                            </td>
+
+                        </tr>
+
+                    }
+
+                    }
+        </div>
+
+
+        </tbody>
+        </table>
+        </div>
+        }

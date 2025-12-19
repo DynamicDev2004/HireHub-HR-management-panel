@@ -1,0 +1,118 @@
+﻿@model TblJob
+<!-- MAIN HERO SECTION -->
+<div class="bg-gradient-to-r from-[#0f0f0f] to-black from-10% to-60% w-screen min-h-screen flex justify-center  px-10 flex-wrap pt-20">
+    <div class="bg-[#1a1a1a] p-8 rounded-3xl shadow-xl w-3/4 max-w-3xl m-11">
+        <h1 class="text-2xl font-bold mb-6 text-center text-white">Delete a Job</h1>
+
+        <form asp-controller="Job" asp-action="Delete" method="post">
+
+            <input readonly asp-for="JobId"
+                   class=" hidden">
+            <!-- Title -->
+            <div>
+                <label asp-for="JobTitle" class="block text-sm font-medium mb-2 text-white">Title</label>
+                <input readonly asp-for="JobTitle"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label asp-for="JobDescription" class="block text-sm font-medium mb-2 text-white">Description</label>
+                <textarea readonly asp-for="JobDescription" rows="4"
+                          class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Salary -->
+            <div>
+                <label asp-for="JobSalary" class="block text-sm font-medium mb-2 text-white">Salary</label>
+                <input readonly asp-for="JobSalary"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+
+            <!-- Duration Type -->
+            <div>
+                <label asp-for="JobDurationType" class="block text-sm font-medium mb-2 text-white">Duration Type</label>
+                <input readonly asp-for="JobDurationType"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Timing -->
+            <div class="flex space-x-4">
+                <div class="flex-1">
+                    <label asp-for="JobTimingFrom" class="block text-sm font-medium mb-2 text-white">Timing From</label>
+                    <input readonly type="time" asp-for="JobTimingFrom"
+                           class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex-1">
+                    <label asp-for="JobTimingTo" class="block text-sm font-medium mb-2 text-white">Timing To</label>
+                    <input readonly type="time" asp-for="JobTimingTo"
+                           class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-5">
+                <label asp-for="JobLocation" class="block text-sm font-medium mb-2 text-white">Job Location</label>
+                <input readonly asp-for="JobLocation" class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+
+
+            <!-- Open Status -->
+            <div>
+                <label asp-for="JobOpenStatus" class="block text-sm font-medium mb-2 text-white">Open Status</label>
+                <input readonly asp-for="JobOpenStatus" class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            </div>
+
+            <!-- Number of Candidates Needed -->
+            <div>
+                <label asp-for="JobOfNumbers" class="block text-sm font-medium mb-2 text-white">Number of Candidates Needed</label>
+                <input readonly asp-for="JobOfNumbers"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+     
+
+       
+
+            <!-- Submit Button -->
+            <div class="text-center mt-4 flex gap-3 w-full justify-center">
+                <a asp-action="AdminIndex" asp-controller="AdminHome" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg transition duration-300" >Cancel</a>
+                <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-lg transition duration-300">
+                    Delete
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

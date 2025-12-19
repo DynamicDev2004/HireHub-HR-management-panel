@@ -1,0 +1,112 @@
+﻿@model TblJob
+
+
+<!-- MAIN HERO SECTION -->
+<div class="bg-gradient-to-r from-[#0f0f0f] to-black from-10% to-60% w-screen min-h-screen flex justify-center  px-10 flex-wrap pt-20">
+    <div class="bg-[#1a1a1a] p-8 rounded-3xl shadow-xl w-3/4 max-w-3xl m-11">
+        <h1 class="text-2xl font-bold mb-6 text-center text-white">Update a Job</h1>
+
+        <form asp-controller="Job" asp-action="Edit" method="post">
+
+            <input readonly asp-for="JobId"
+                   class=" hidden">
+
+            <!-- Title -->
+            <div>
+                <label asp-for="JobTitle" class="block text-sm font-medium mb-2 text-white">Title</label>
+                <input asp-for="JobTitle" placeholder="Enter job title"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label asp-for="JobDescription" class="block text-sm font-medium mb-2 text-white">Description</label>
+                <textarea asp-for="JobDescription" rows="4" placeholder="Enter job description"
+                          class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Salary -->
+            <div>
+                <label asp-for="JobSalary" class="block text-sm font-medium mb-2 text-white">Salary</label>
+                <input asp-for="JobSalary" placeholder="Enter salary"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+
+            <!-- Duration Type -->
+            <div>
+                <label asp-for="JobDurationType" class="block text-sm font-medium mb-2 text-white">Duration Type</label>
+                <select asp-for="JobDurationType"
+                        class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Remote" selected>Remote</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+
+                </select>
+            </div>
+
+            <!-- Timing -->
+            <div class="flex space-x-4">
+                <div class="flex-1">
+                    <label asp-for="JobTimingFrom" class="block text-sm font-medium mb-2 text-white">Timing From</label>
+                    <input type="time" asp-for="JobTimingFrom"
+                           class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex-1">
+                    <label asp-for="JobTimingTo" class="block text-sm font-medium mb-2 text-white">Timing To</label>
+                    <input type="time" asp-for="JobTimingTo"
+                           class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-5">
+                <label asp-for="JobLocation" class="block text-sm font-medium mb-2 text-white">Job Location</label>
+                <input asp-for="JobLocation" class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Job Location" />
+            </div>
+
+
+
+            <!-- Open Status -->
+            <div>
+                <label asp-for="JobOpenStatus" class="block text-sm font-medium mb-2 text-white">Open Status</label>
+                <select asp-for="JobOpenStatus"
+                        class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Open" selected>Open</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+
+            <!-- Number of Candidates Needed -->
+            <div>
+                <label asp-for="JobOfNumbers" class="block text-sm font-medium mb-2 text-white">Number of Candidates Needed</label>
+                <input asp-for="JobOfNumbers" placeholder="Enter number"
+                       class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Role -->
+
+            <div class="mb-5">
+                <label asp-for="RoleId" class="block text-sm font-medium mb-2 text-white"></label>
+                <select asp-for="RoleId" asp-items="@(new SelectList(ViewBag.roles , nameof(TblRole.RoleId),nameof(TblRole.RoleName)))" class="w-full p-3 rounded-lg bg-black text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </select>
+                <span asp-validation-for="RoleId" class="text-red-800"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center mt-4 flex gap-3 w-full justify-center">
+                <a asp-action="AdminIndex" asp-controller="AdminHome" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg transition duration-300 flex items-center justify-center">Cancel</a>
+                <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Update
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+</div>
+

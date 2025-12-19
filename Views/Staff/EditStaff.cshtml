@@ -1,0 +1,93 @@
+﻿@model StaffModel
+
+
+<div class="w-screen flex items-center justify-center">
+
+    <div class="container mx-auto pt-[100px] px-6">
+        <form asp-action="EditStaff" asp-controller="Staff" method="post" class="bg-[#161616] shadow-md rounded-lg p-4">
+            <h1 class="text-2xl font-bold text-white mb-6">Edit Staff Details</h1>
+
+            <!-- Hidden fields for UserId and LeftDateTime -->
+            <input type="hidden" asp-for="Staff_UserId" />
+            <input type="hidden" asp-for="Staff_Id" />
+            <input asp-for="Staff_LeftDateTime" />
+
+
+            <!-- Name (readonly) -->
+            <div class="mb-4">
+                <label class="block text-gray-400 text-sm font-bold mb-2">Name:</label>
+                <input type="text" asp-for="Staff_Name" readonly
+                       class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+            </div>
+
+            <!-- Role, Status, and Duration Type in one row -->
+            <div class="flex gap-4 mb-4">
+                <!-- Role -->
+                <div class="flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Role:</label>
+                    <select asp-for="Staff_Role" asp-items="@(new SelectList(ViewBag.roles , nameof(TblRole.RoleId),nameof(TblRole.RoleName)))" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                    </select>
+                </div>
+
+                <!-- Status -->
+                <div class="flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Status:</label>
+                    <select asp-for="Staff_Status" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="Active">Active</option>
+                        <option value="Left">Left</option>
+                    </select>
+                </div>
+
+                <!-- Duration Type -->
+                <div class="flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Duration Type:</label>
+                    <select asp-for="Staff_DurationType" class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200">
+                        <option value="Part-Time">Part-Time</option>
+                        <option value="Full-Time">Full-Time</option>
+                        <option value="Remote">Remote</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Salary -->
+            <div class="mb-4">
+                <label class="block text-gray-400 text-sm font-bold mb-2">Salary:</label>
+                <input type="number" asp-for="Staff_Salary"
+                       class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+            </div>
+
+            <!-- Joining Date and Timing fields -->
+            <div class="flex gap-4 mb-4">
+
+
+                <!-- Timing From -->
+                <div class="flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Timing From:</label>
+                    <input type="time" asp-for="Staff_TimingFrom"
+                           class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+                </div>
+
+                <!-- Timing To -->
+                <div class="flex-1">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Timing To:</label>
+                    <input type="time" asp-for="Staff_TimingTo"
+                           class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" />
+                </div>
+
+
+                <!-- Access Type -->
+                <div class="mb-4">
+                    <label class="block text-gray-400 text-sm font-bold mb-2">Access Type:</label>
+                    <input type="text" asp-for="Staff_AccessType"
+                           class="w-full p-2 border border-gray-600 rounded-md bg-black text-gray-200" value="Staff" readonly disabled />
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="flex justify-end">
+                <a asp-action="AdminIndex" asp-controller="AdminHome" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg transition duration-300 flex items-center justify-center">Cancel</a>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+</div>

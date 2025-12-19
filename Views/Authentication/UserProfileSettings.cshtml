@@ -1,0 +1,94 @@
+﻿@model UserProfileSettingsModel
+
+@{
+    <div class="bg-gradient-to-r from-[#0f0f0f] to-black from-10% to-60% w-screen min-h-screen h-screen items-center flex justify-between pt-[90px]  gap-9 p-11 flex-wrap">
+
+        <div class="bg-[#161616] w-full h-full rounded-2xl p-6 overflow-scroll ">
+            <h1 class="text-[#ffffff] font-bold text-[14pt]">Profile Settings</h1>
+            <h6 class="text-[#ffffffa3] font-regular text-[9pt]">Manage your name, password and account settings.</h6>
+            <div class=" bg-[#ffffff25] w-full h-[1px] my-3"></div>
+            <!-- Avatar Editing -->
+            <div class="flex items-center flex-wrap">
+
+                <h3 class="text-[#ffffff] font-regular text-[11pt]">Profile Image</h3>
+
+                <img src="./public/MEMOJI.png" alt="" width="100px" class="rounded-full overflow-hidden border mx-12">
+                <button class="px-3 p-1  bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center flex hover:text-[#008ded] cursor-pointer">
+                    Change
+                    Image
+                </button>
+            </div>
+
+            <div class=" bg-[#ffffff25] w-full h-[1px] my-3"></div>
+            <div class="mt-7">
+
+                <h3 class="text-[#ffffff] font-bold text-[11pt]">Personal info</h3>
+
+                <form action="" class=" flex flex-col ">
+
+                    <span class="flex gap-8 items-center my-5  max-w-[450px] ">
+                        <label asp-for="Username" class="text-white text-xs">Username</label>
+                        <input asp-for="Username" class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1 w-full "
+                              >
+                    </span>
+
+                    <span class="flex gap-8 items-center my-5  max-w-[450px] ">
+                        <label asp-for="Email" class="text-white text-xs">Email</label>
+                        <input asp-for="Email" class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1 w-full"
+                               >
+                    </span>
+
+
+                    <span class="flex gap-8 items-center my-5  max-w-[450px]">
+                        <label  asp-for="ContactNumber" class="text-white text-xs">Contact No.</label>
+                        <input  class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1  w-full"
+                               asp-for="ContactNumber">
+                    </span>
+
+                    <span class="flex gap-8 items-center my-5  max-w-[450px]">
+                        <label asp-for="Location"  class="text-white text-xs">Location</label>
+                        <input  asp-for="Location" class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1 w-full "
+                              >
+                    </span>
+
+                    <div class=" bg-[#ffffff25] w-full h-[1px] my-3"></div>
+
+                    <h3 class="text-[#ffffff] font-bold text-[11pt]">Change Password</h3>
+
+                    <span class="flex gap-8 items-center my-5  max-w-[450px]">
+                        <label asp-for="NewPassword" class="text-white text-xs">New Password</label>
+                        <input asp-for="NewPassword"  class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1  w-full"
+                              >
+                    </span>
+
+                    <span class="flex gap-8 items-center my-5  max-w-[450px]">
+                        <label asp-for="ReEnterPassword" class="text-white text-xs">Re-Enter Password</label>
+                        <input class="bg-[#ffffff13] text-white outline-none rounded-full text-xs p-2 px-3 mt-1 w-full"
+                                asp-for="ReEnterPassword">
+                    </span>
+
+                    <span class="flex gap-5 mt-7">
+                        <a class=" border w-max p-1 text-xs px-3 text-white rounded-full text-[10pt] flex hover:text-[#008ded] cursor-pointer ">
+                            View
+                            Details
+                        </a>
+
+                        <button class="px-3 p-1 max-w-max bg-[#008ded] text-white rounded-full text-[9pt] items-center justify-center flex hover:text-[#008ded] cursor-pointer">
+                            Save
+                            Changes
+                        </button>
+
+                    </span>
+                </form>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+}

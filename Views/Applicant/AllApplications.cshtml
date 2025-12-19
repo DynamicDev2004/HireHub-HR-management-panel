@@ -1,0 +1,121 @@
+﻿@model CombinedAppliedJobsData
+
+<title>@ViewData["Title"] ALL APPLICATIONS</title>
+<div class="container mx-auto pt-[80px] px-8 flex justify-between items-center w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        @foreach (var applicant in Model.applicant)
+        {
+            <div class="bg-[#161616] shadow-md rounded-lg p-3 relative">
+
+
+                <div class="absolute right-4 top-4 flex gap-5">
+
+                    <a class="cursor-pointer" asp-action="EditApplication" asp-controller="Applicant" asp-route-applicationId="@applicant.ApplicantId">
+                        <svg width="20px" id="fc531f65-72f6-46ab-9934-cd28d096c6d0" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.48 120.34">
+                            <defs>
+                                <style>
+                                    .f7c5bfbc-9afb-4fc9-b835-edd115512396 {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="f7c5bfbc-9afb-4fc9-b835-edd115512396" d="M131.81,39.71a14.83,14.83,0,0,1-.89,2.76,18.91,18.91,0,0,1-2.57,4c-2.27,2.47-4.74,4.77-7,7.07L103.48,35.75c2.92-2.74,5.64-5.91,9-8.28,7.12-5.09,17.13-.89,19.12,7.74a7.25,7.25,0,0,0,.26.74Z" transform="translate(-11.33 -25.27)" />
+                            <path class="f7c5bfbc-9afb-4fc9-b835-edd115512396" d="M61.48,145.59c-11.88,0-23.76,0-35.64,0-5.34,0-9.18-2.48-12.08-6.68a14.11,14.11,0,0,1-2.43-8.21q0-35.11,0-70.23a15.07,15.07,0,0,1,15-15.09c13.33,0,26.66,0,40,0a5.07,5.07,0,0,1,5.22,4.31,5,5,0,0,1-3.76,5.6,8.2,8.2,0,0,1-1.86.16c-12.9,0-25.8.06-38.7,0a5.48,5.48,0,0,0-5.84,5.8q.14,34.41,0,68.82a5.46,5.46,0,0,0,5.74,5.74q34.41-.12,68.82,0a5.47,5.47,0,0,0,5.79-5.84c-.08-13.1,0-26.2,0-39.29a5,5,0,0,1,9.48-2.31,6.16,6.16,0,0,1,.57,2.49c0,13.37.07,26.74,0,40.11a15.09,15.09,0,0,1-11.82,14.54,7.67,7.67,0,0,1-1.52.1Z" transform="translate(-11.33 -25.27)" />
+                            <path class="f7c5bfbc-9afb-4fc9-b835-edd115512396" d="M97.93,41.22,115.8,59.09c-.26.27-.56.61-.88.93q-18.7,18.7-37.39,37.44a8.34,8.34,0,0,1-4.63,2.46c-5,.93-10.05,2-15.07,3-2.69.54-4.1-.85-3.56-3.52,1.08-5.37,2.16-10.73,3.2-16.11A5.38,5.38,0,0,1,59,80.34Q78.15,61.27,97.21,42.18A7.75,7.75,0,0,0,97.93,41.22Z" transform="translate(-11.33 -25.27)" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- User Information Section -->
+                <h1 class="text-lg font-semibold text-white mb-3">
+                    @Model.users.FirstOrDefault(x => x.UserId == applicant.user_id)?.UserName
+                </h1>
+
+                <!-- First Toggle Section: User Email, Contact, Location -->
+                <button class="w-full bg-[#202020] text-white p-1.5 rounded-md text-xs mb-2" onclick="toggleSection('user-details-@applicant.JobId')">Toggle User Details</button>
+                <div id="user-details-@applicant.JobId" class="hidden mt-2 text-xs">
+                    <p class="text-gray-400 mb-1">
+                        <strong>Email:</strong>
+                        <span class="text-gray-200">@Model.users.FirstOrDefault(x => x.UserId == applicant.user_id)?.UserEmail</span>
+                    </p>
+                    <p class="text-gray-400 mb-1">
+                        <strong>Contact No:</strong>
+                        <span class="text-gray-200">@Model.users.FirstOrDefault(x => x.UserId == applicant.user_id)?.UserContactNo</span>
+                    </p>
+                    <p class="text-gray-400 mb-1">
+                        <strong>Location:</strong>
+                        <span class="text-gray-200">@Model.users.FirstOrDefault(x => x.UserId == applicant.user_id)?.UserLocation</span>
+                    </p>
+                </div>
+
+                <!-- Job Title and CV -->
+
+
+                <div class="my-3">
+                    <strong class="text-gray-400 text-xs">Job:</strong>
+                    <h2 class="text-md font-semibold text-white mb-3">
+                        @applicant.Job.JobTitle
+                    </h2>
+                </div>
+
+
+                <div class="my-3">
+                    <strong class="text-gray-400 text-xs">Proposal:</strong>
+                    <textarea disabled class="w-full p-1.5 border border-gray-600 rounded-md bg-black text-gray-200 text-xs" readonly>@applicant.ApplicantProposal</textarea>
+                </div>
+
+                <p class="text-gray-400 mb-2 text-xs">
+                    <strong>CV:</strong>
+                    <span class="text-gray-200">
+                        <iframe src="@applicant.ApplicantCv" type="application/pdf" frameBorder="0" scrolling="auto" height="150px" width="100%"></iframe>
+                    </span>
+                </p>
+
+
+
+                <!-- Second Toggle Section: Interviews, Status, Selection -->
+                <button class="w-full bg-[#202020] text-white p-1.5 rounded-md text-xs mb-2" onclick="toggleSection('interviews-status-selection-@applicant.JobId')">Toggle Interviews, Status, Selection</button>
+                <div id="interviews-status-selection-@applicant.JobId" class="hidden mt-2 text-xs">
+                    <!-- Interviews Section -->
+                    <div class="mb-3">
+                        <strong class="text-gray-400">Interviews:</strong>
+                        <div class="flex space-x-1 mt-2">
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs">@applicant.ApplicantInterview1DateTime</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs">@applicant.ApplicantInterview2DateTime</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs">@applicant.ApplicantInterview3DateTime</span>
+                        </div>
+                    </div>
+
+                    <!-- Status Section -->
+                    <div class="mb-3">
+                        <strong class="text-gray-400">Status:</strong>
+                        <div class="flex space-x-1 mt-2">
+                            <span class="px-2 py-1 bg-gray-700 text-green-400 rounded-full text-xs">@applicant.Applicant1Status</span>
+                            <span class="px-2 py-1 bg-gray-700 text-yellow-400 rounded-full text-xs">@applicant.Applicant2Status</span>
+                            <span class="px-2 py-1 bg-gray-700 text-red-400 rounded-full text-xs">@applicant.Applicant3Status</span>
+                        </div>
+                    </div>
+
+                    <!-- Selection Section -->
+                    <div class="mb-3">
+                        <strong class="text-gray-400">Selection:</strong>
+                        <div class="flex space-x-1 mt-2">
+                            <span class="px-2 py-1 bg-gray-700 text-blue-400 rounded-full text-xs">@applicant.ApplicantIsSelected</span>
+                            <span class="px-2 py-1 bg-gray-700 text-purple-400 rounded-full text-xs">@applicant.ApplicantIsHired</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Fields -->
+                <input type="hidden" value="@applicant.JobId" />
+                <input type="hidden" value="@applicant.user_id" />
+            </div>
+        }
+    </div>
+</div>
+
+<script>// Function to toggle visibility of a specific section
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.classList.toggle('hidden');
+    }</script>

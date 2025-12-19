@@ -1,0 +1,54 @@
+﻿@model List<TblRole>
+
+
+
+
+<h1 class="text-center text-4xl font-bold">All Roles</h1>
+
+
+
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Role Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Role Description
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Role Created At
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (TblRole role in Model)
+                {
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            @role.RoleName
+                        </th>
+                        <td class="px-6 py-4">
+                            @role.RoleDescription
+                        </td>
+                        <td class="px-6 py-4">
+                            @role.RoleCreatedAt
+                        </td>
+                        <td class="px-6 py-4">
+                            <div class="flex gap-3">
+                                <a asp-controller="Roles" asp-action="Edit" asp-route-RoleId="@role.RoleId" class="bg-blue-500 py-2 px-4 rounded-md text-white">Edit</a>
+                                <a asp-controller="Roles" asp-action="Delete" asp-route-RoleId="@role.RoleId" class="bg-red-500 py-2 px-4 rounded-md text-white">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
